@@ -1,0 +1,21 @@
+.page-header{
+    border-bottom: transparent;
+    text-align: center;
+}
+
+.form-control {
+    border: 1px solid #D6D6D6;
+    border-radius: 0;
+    height: 50px;
+}
+
+.row {
+    padding: 0px 70px 20px 70px;
+}
+
+.btn {
+    padding: 10px;
+    border-radius: 0;
+    border: none;
+    font-size: 21px;
+}
