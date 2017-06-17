@@ -40,7 +40,7 @@ router.post('/authentication', (req, res, next) => {
         if(err) throw err;
         
         if(!user){
-            return res.json({success: false, msg:'User tidak ditemukan'});
+            return res.json({success: false, msg:'User tidak ditemukan '});
         }
         
         User.comparePassword(password, user.password, (err,isMatch)=>{
@@ -52,7 +52,7 @@ router.post('/authentication', (req, res, next) => {
                 
                 res.json({
                     success:true,
-                    token: 'JWT'+token,
+                    token: 'JWT '+token,
                     user:{
                         id:user._id,
                         name: user.name,
@@ -69,7 +69,7 @@ router.post('/authentication', (req, res, next) => {
 });
 
 //PROFILE
-router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res, next) => {
+router.get('/profile', passport.authenticate('jwt',{session:false}), (req, res, next) => {
     res.json({user:req.user});
 });
 
